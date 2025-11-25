@@ -38,7 +38,7 @@ for i in {01..08}
 do
     TEAM="team$i"
     DB="${TEAM}_db"
-    PASS="pass_$TEAM"
+    PASS="pass_t3am$i"
 
     echo "Processing $TEAM..."
 
