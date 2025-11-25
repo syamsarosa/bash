@@ -53,7 +53,7 @@ do
         chmod 755 /var/www/$TEAM
 
         mkdir -p /var/www/$TEAM/www
-        chown $TEAM:sftpusers /var/www/$TEAM/www
+        chown -R $TEAM:sftpusers /var/www/$TEAM/www
 
         # Default index
         if [ ! -f /var/www/$TEAM/www/index.php ]; then
@@ -100,6 +100,11 @@ Match Group sftpusers
 
 EOF
 fi
+
+# =================================
+# Open port
+# =================================
+ufw allow 80
 
 # =================================
 # Restart services safely
