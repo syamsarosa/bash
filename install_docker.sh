@@ -49,4 +49,5 @@ docker --version
 # Add user to Docker group
 ##############################################
 echo "===== ADDING SUDO USER TO DOCKER GROUP ====="
-usermod -aG docker $USER
+usermod -aG docker $SUDO_USER
+echo "LOG OUT AND LOG BACK IN FOR DOCKER GROUP CHANGES TO TAKE EFFECT."
